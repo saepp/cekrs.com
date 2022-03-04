@@ -16,5 +16,23 @@
   "devDependencies": {
     "eslint": "8.10.0",
     "eslint-config-next": "12.1.0"
-  }
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saepp/cekrs.com.git"
+  },
+  "keywords": [
+    "cekrs",
+    "cekrs.com",
+    "cek",
+    "rs"
+  ],
+  "author": "saepp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/saepp/cekrs.com/issues"
+  },
+  "homepage": "https://github.com/saepp/cekrs.com#readme"
 }
