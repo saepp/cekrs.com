@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  option {
+    @apply font-bold;
+  }
+  .label-one {
+    @apply inline-block relative cursor-pointer font-bold text-lg pl-7 select-none;
+  }
+  .checkmark {
+    @apply absolute top-1 left-1 h-5 w-5 bg-slate-700 rounded-full after:content-[''] after:absolute after:hidden;
+  }
+  .label-one:hover input ~ .checkmark {
+    @apply bg-slate-900;
+  }
+  .label-one input:checked ~ .checkmark {
+    @apply bg-[#2196F3];
+  }
+  .label-one input:checked ~ .checkmark::after {
+    @apply inline-block;
+  }
+  .label-one .checkmark::after {
+    @apply top-1.5 left-1.5 w-2 h-2 rounded-full bg-white;
+  }
+}
