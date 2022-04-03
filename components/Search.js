@@ -38,7 +38,6 @@ const Search = ({
 
   useEffect(() => {
     searchCitiesByProvince(prov);
-    console.log(type);
   }, [prov]);
 
   return (
@@ -81,7 +80,7 @@ const Search = ({
           ))}
         </select>
       </div>
-      <div className="flex mb-6">
+      <div className="flex flex-col md:flex-row mb-6">
         <h3 className="font-bold text-lg">Pilih Tempat Tidur : </h3>
         <label className="label-one">
           Covid 19
@@ -90,7 +89,7 @@ const Search = ({
             className="absolute opacity-0 cursor-pointer"
             name="radio"
             value="1"
-            onChange={(e) => setType(e.target.value)}
+            onClick={(e) => setType(e.target.value)}
           />
           <span className="checkmark"></span>
         </label>
@@ -101,7 +100,7 @@ const Search = ({
             className="absolute opacity-0 cursor-pointer"
             name="radio"
             value="2"
-            onChange={(e) => setType(e.target.value)}
+            onClick={(e) => setType(e.target.value)}
           />
           <span className="checkmark"></span>
         </label>
@@ -110,7 +109,7 @@ const Search = ({
         className={`${classButton} ${!prov && "cursor-not-allowed"}`}
         disabled={!prov || load}
         onClick={() =>
-          router.push(`/rs?prov=${prov}?city=${city}?type=${type}`)
+          router.push(`/rs?prov=${prov}&city=${city}&type=${type}`)
         }
       >
         Cari

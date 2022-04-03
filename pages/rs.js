@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import useSWR from "swr";
 import React from "react";
+import CardHospital from "../components/CardHospital";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
@@ -20,7 +21,12 @@ const RumahSakit = () => {
     }
   };
 
-  return <div></div>;
+  return (
+    <div>
+      <CardHospital />
+      <CardHospital />
+    </div>
+  );
 };
 
 export default RumahSakit;
