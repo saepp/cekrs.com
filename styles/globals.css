@@ -7,10 +7,10 @@
     @apply font-bold;
   }
   .label-one {
-    @apply inline-block relative cursor-pointer font-bold text-lg pl-7 select-none;
+    @apply inline-flex relative cursor-pointer pl-7 select-none;
   }
   .checkmark {
-    @apply absolute top-1 left-1 h-5 w-5 bg-slate-700 rounded-full after:content-[''] after:absolute after:hidden;
+    @apply absolute left-1 h-5 w-5 bg-slate-700 rounded-full after:content-[''] after:absolute after:hidden;
   }
   .label-one:hover input ~ .checkmark {
     @apply bg-slate-900;

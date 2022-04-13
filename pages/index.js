@@ -21,6 +21,11 @@ export default function Home() {
           classDivTwo="mb-6"
           classTextTwo="font-bold text-xl mb-1"
           classSelectTwo="border bg-transparent w-full h-10 rounded border-black/20 font-bold text-md pl-4"
+          classDivRadioOne="flex flex-col md:flex-row mb-6"
+          classTextRadio="font-bold text-lg"
+          classDivRadioTwo="flex flex-col md:flex-row"
+          classCheckmarkOne="top-1"
+          classLabelOne="font-bold text-lg"
           classButton="w-full h-10 bg-[#262FD8] text-white font-bold rounded cursor-pointer"
         />
       </div>

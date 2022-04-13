@@ -12,6 +12,12 @@ const Search = ({
   classDivTwo,
   classTextTwo,
   classSelectTwo,
+  classDivRadioOne,
+  classTextRadio,
+  classDivRadioTwo,
+  classBoxOne,
+  classCheckmarkOne,
+  classLabelOne,
   classButton,
 }) => {
   const [prov, setProv] = useState("");
@@ -80,30 +86,38 @@ const Search = ({
           ))}
         </select>
       </div>
-      <div className="flex flex-col md:flex-row mb-6">
-        <h3 className="font-bold text-lg">Pilih Tempat Tidur : </h3>
-        <label className="label-one">
-          Covid 19
-          <input
-            type="radio"
-            className="absolute opacity-0 cursor-pointer"
-            name="radio"
-            value="1"
-            onClick={(e) => setType(e.target.value)}
-          />
-          <span className="checkmark"></span>
-        </label>
-        <label className="label-one">
-          Non-Covid 19
-          <input
-            type="radio"
-            className="absolute opacity-0 cursor-pointer"
-            name="radio"
-            value="2"
-            onClick={(e) => setType(e.target.value)}
-          />
-          <span className="checkmark"></span>
-        </label>
+      <div className={classDivRadioOne}>
+        <h3 className={classTextRadio}>Pilih Tempat Tidur : </h3>
+        <div className={classDivRadioTwo}>
+          <div className={`${classBoxOne} mr-2`}>
+            <label className={`label-one ${classLabelOne}`}>
+              Covid 19
+              <input
+                type="radio"
+                className="absolute opacity-0 cursor-pointer"
+                name="radio"
+                value="1"
+                defaultChecked={type === 1}
+                onClick={(e) => setType(e.target.value)}
+              />
+              <span className={`checkmark ${classCheckmarkOne}`}></span>
+            </label>
+          </div>
+          <div className={classBoxOne}>
+            <label className={`label-one ${classLabelOne}`}>
+              Non-Covid 19
+              <input
+                type="radio"
+                className="absolute opacity-0 cursor-pointer"
+                name="radio"
+                value="2"
+                defaultChecked={type === 2}
+                onClick={(e) => setType(e.target.value)}
+              />
+              <span className={`checkmark ${classCheckmarkOne}`}></span>
+            </label>
+          </div>
+        </div>
       </div>
       <button
         className={`${classButton} ${!prov && "cursor-not-allowed"}`}
