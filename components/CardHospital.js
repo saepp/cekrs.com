@@ -100,7 +100,7 @@ const CardHospital = ({ hosp, type }) => {
             Lokasi
           </button>
           <button
-            onClick={() => router.push("/rs-detail?id=${id}&type=${type}")}
+            onClick={() => router.push(`/rs-detail?id=${id}&type=${type}`)}
             className="flex h-10 justify-center items-center bg-white border border-[#262FD8] rounded-md px-4 text-[#262FD8] font-semibold ml-2 cursor-pointer"
           >
             Detail

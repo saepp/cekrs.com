@@ -1,7 +1,10 @@
 import React from "react";
 import { IoIosArrowDown } from "react-icons/io";
 
-const CardBed = () => {
+const CardBed = ({ detail }) => {
+  const { stats, time } = detail;
+  const { title, bed_available: bed, bed_empty: empty, queue } = stats;
+
   return (
     <div className="relative w-full overflow-hidden h-fit mb-2 shadow-lg">
       <input
@@ -9,8 +12,8 @@ const CardBed = () => {
         className="peer absolute top-0 inset-x-0 w-full h-20 opacity-0 z-10 cursor-pointer"
       />
       <div className="bg-white h-20 w-full pl-5 flex flex-col rounded-md justify-center drop-shadow-md shadow-black">
-        <p className="text-xl font-bold">IGD Khusus Covid</p>
-        <p className="text-lg font-bold">Diupdate pada 14-04-22 08:53:17</p>
+        <p className="text-xl font-bold">{title}</p>
+        <p className="text-lg font-bold">Diupdate pada {time}</p>
       </div>
 
       {/* Arrow Icon */}
@@ -23,15 +26,15 @@ const CardBed = () => {
         <div className="flex justify-around p-4">
           <div className="flex flex-col bg-green-600 rounded-md p-4 items-center">
             <p className="font-semibold">Tempat Tidur</p>
-            <p className="font-bold text-3xl">2</p>
+            <p className="font-bold text-3xl">{bed}</p>
           </div>
           <div className="flex flex-col bg-blue-600 rounded-md p-4 items-center">
-            <p className="font-semibold">Tempat Tidur</p>
-            <p className="font-bold text-3xl">2</p>
+            <p className="font-semibold">Kosong</p>
+            <p className="font-bold text-3xl">{empty}</p>
           </div>
           <div className="flex flex-col bg-orange-600 rounded-md p-4 items-center">
-            <p className="font-semibold">Tempat Tidur</p>
-            <p className="font-bold text-3xl">2</p>
+            <p className="font-semibold">Antrean</p>
+            <p className="font-bold text-3xl">{queue}</p>
           </div>
         </div>
       </div>
