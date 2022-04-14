@@ -56,7 +56,7 @@ const Search = ({
           disabled={!data}
           onChange={(e) => setProv(e.target.value)}
         >
-          <option value="DEFAULT" disabled selected>
+          <option value="" disabled selected>
             Pilih Provinsi ...
           </option>
           {data?.provinces.map((province) => (
@@ -74,7 +74,7 @@ const Search = ({
           disabled={!prov.length || load}
           onChange={(e) => setCity(e.target.value)}
         >
-          <option value="DEFAULT" disabled selected>
+          <option value="" disabled selected>
             {!prov.length
               ? "Silahkan Pilih Provinsi Terlebih Dahulu"
               : "Pilih Kabupaten / Kota..."}
