@@ -40,7 +40,7 @@ const RumahSakit = () => {
         <hr className="w-full border-b border-black/20 my-2 w" />
         <button
           onClick={() => router.back()}
-          className="flex w-full h-10 text-white bg-[#262FD8] justify-center items-center text-center font-bold rounded-md mb-2"
+          className="flex w-full h-10 text-white bg-[#262FD8] hover:bg-[#0f1699] justify-center items-center text-center font-bold rounded-md mb-2"
         >
           <FaArrowLeft className="mr-2" /> Kembali Ke Daftar
         </button>

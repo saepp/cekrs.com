@@ -126,8 +126,8 @@ const Search = ({
         </div>
       </div>
       <button
-        className={`${classButton} hover:bg-[#0f1699] ${
-          !prov && "cursor-not-allowed bg-[#53b0f3]"
+        className={`${classButton} ${
+          !prov ? "cursor-not-allowed bg-[#262fd867]" : "hover:bg-[#0f1699]"
         }`}
         disabled={!prov || load}
         onClick={() =>
