@@ -6,6 +6,7 @@ import { FaArrowLeft } from "react-icons/fa";
 
 import CardHospital from "../components/CardHospital";
 import Search from "../components/Search";
+import Spinner from "../components/Spinner";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
@@ -59,7 +60,15 @@ const RumahSakit = () => {
         >
           <FaArrowLeft className="mr-2" /> Kembali Ke Pencarian
         </button>
-        <div>{data ? showData(data.hospitals) : <div></div>}</div>
+        <div>
+          {data ? (
+            showData(data.hospitals)
+          ) : (
+            <div>
+              <Spinner />
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
