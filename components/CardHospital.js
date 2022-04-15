@@ -19,7 +19,7 @@ const CardHospital = ({ hosp, type }) => {
   const router = useRouter();
 
   const { data } = useSWR(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/get-hospital-map?hospitalid=${id}`,
+    `${process.env.NEXT_PUBLIC_API_URL}/get-hospital-map?hospitalid=${id}`,
     fetcher
   );
 
@@ -81,31 +81,35 @@ const CardHospital = ({ hosp, type }) => {
         </div>
       )}
       <div className="flex mt-2 pt-2 justify-between">
-        <button
+        <a
           href={`tel:${phone}`}
-          disabled={!phone}
-          className="flex justify-center items-center h-10 bg-[#262FD8] text-white font-semibold px-4 rounded-md"
+          disabled={!phone || phone === "null"}
+          className={`inline-flex justify-center items-center ${
+            !phone || phone === "null"
+              ? "cursor-not-allowed bg-[#262fd867]"
+              : "hover:bg-[#0f1699]"
+          } h-10 bg-[#262FD8] text-white font-semibold px-4 rounded-md`}
         >
           <FaPhone className="mr-2" />
           {phone || "Tidak tersedia"}
-        </button>
+        </a>
         <div className="flex">
-          <button
+          <a
             href={data?.data?.gmaps}
             rel="noreferrer"
             target="_blank"
-            className="flex h-10 justify-center items-center bg-white border border-[#262FD8] rounded-md px-4 text-[#262FD8] font-semibold"
+            className="inline-flex h-10 justify-center items-center bg-white border border-[#262FD8] hover:border-[#0f1699] hover:text-[#0f1699] rounded-md px-4 text-[#262FD8] font-semibold"
           >
             <FaMapMarkerAlt className="mr-2" />
             Lokasi
-          </button>
-          <button
+          </a>
+          <a
             onClick={() => router.push(`/rs-detail?id=${id}&type=${type}`)}
-            className="flex h-10 justify-center items-center bg-white border border-[#262FD8] rounded-md px-4 text-[#262FD8] font-semibold ml-2 cursor-pointer"
+            className="flex h-10 justify-center items-center bg-white border border-[#262FD8] rounded-md px-4 text-[#262FD8] hover:border-[#0f1699] hover:text-[#0f1699] font-semibold ml-2 cursor-pointer"
           >
             Detail
             <FaArrowRight className="ml-2" />
-          </button>
+          </a>
         </div>
       </div>
     </div>
