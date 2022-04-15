@@ -36,22 +36,22 @@ const RumahSakit = () => {
       <Head>
         <title>Cek RS Indonesia</title>
       </Head>
-      <div className="flex flex-col max-w-screen-md mx-auto px-2 pt-6 pb-2 w">
+      <div className="flex flex-col max-w-screen-md mx-auto px-2 pt-6 pb-2">
         <h1 className="font-bold text-5xl text-center">Daftar Rumah Sakit</h1>
         <Search
-          classAll="flex flex-col md:flex-row w-full relative"
+          classAll="flex flex-col md:flex-row w-full relative mt-5"
           classDivOne="mr-2"
           classTextOne="font-bold"
-          classSelectOne="h-10 w-full md:max-w-[176px] font-bold"
+          classSelectOne="h-10 w-full md:max-w-[176px] font-bold rounded-md"
           classDivTwo="mr-2"
           classTextTwo="font-bold"
-          classSelectTwo="h-10 w-full md:max-w-[176px] font-bold"
+          classSelectTwo="h-10 w-full md:max-w-[176px] font-bold rounded-md"
           classDivRadioOne="mr-2"
           classTextRadio="font-bold"
-          classBoxOne="inline-flex w-fit h-10 border items-center px-2"
+          classBoxOne="inline-flex w-fit h-10 border items-center px-2 rounded-md"
           classCheckmarkOne="top-0.5"
           classLabelOne="font-bold"
-          classButton="absolute h-10 border w-28 bottom-0 right-0 font-bold bg-[#262FD8] text-white rounded-md"
+          classButton="absolute h-10 border w-28 bottom-0 right-0 font-bold bg-[#262FD8] text-white rounded-md mr-2"
         />
         <hr className="w-full border-b border-black/20 my-2 w" />
         <button
@@ -64,7 +64,7 @@ const RumahSakit = () => {
           {data ? (
             showData(data.hospitals)
           ) : (
-            <div>
+            <div className="flex items-center justify-center mt-4">
               <Spinner />
             </div>
           )}
