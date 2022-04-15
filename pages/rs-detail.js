@@ -34,7 +34,7 @@ const RumahSakit = () => {
           classTextRadio="font-bold"
           classDivRadioTwo="flex"
           classBoxOne="inline-flex w-fit h-10 border items-center justify-center rounded-md"
-          classCheckmarkOne=""
+          classCheckmarkOne="top-0.5"
           classLabelOne="font-bold pl-7 pr-1"
           classDivButton="flex items-end justify-center"
           classButton="w-full h-10 border md:w-28 font-bold bg-[#262FD8] text-white rounded-md mr-2 mt-2"
