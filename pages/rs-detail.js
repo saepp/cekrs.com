@@ -23,19 +23,21 @@ const RumahSakit = () => {
       <div className="flex flex-col max-w-screen-md mx-auto px-2 pt-6 pb-2">
         <h1 className="font-bold text-5xl text-center">Daftar Rumah Sakit</h1>
         <Search
-          classAll="flex flex-col md:flex-row w-full relative mt-5"
-          classDivOne="mr-2"
+          classAll="flex flex-col md:flex-row justify-center w-full mt-5"
+          classDivOne="mr-3"
           classTextOne="font-bold"
           classSelectOne="h-10 w-full md:max-w-[176px] font-bold rounded-md"
-          classDivTwo="mr-2"
+          classDivTwo="mr-3"
           classTextTwo="font-bold"
           classSelectTwo="h-10 w-full md:max-w-[176px] font-bold rounded-md"
-          classDivRadioOne="mr-2"
+          classDivRadioOne="mr-3"
           classTextRadio="font-bold"
-          classBoxOne="inline-flex w-fit h-10 border items-center px-2 rounded-md"
-          classCheckmarkOne="top-0.5"
-          classLabelOne="font-bold"
-          classButton="absolute h-10 border w-28 bottom-0 right-0 font-bold bg-[#262FD8] text-white rounded-md mr-2"
+          classDivRadioTwo="flex"
+          classBoxOne="inline-flex w-fit h-10 border items-center justify-center rounded-md"
+          classCheckmarkOne=""
+          classLabelOne="font-bold pl-7 pr-1"
+          classDivButton="flex items-end justify-center"
+          classButton="w-full h-10 border md:w-28 font-bold bg-[#262FD8] text-white rounded-md mr-2 mt-2"
         />
         <hr className="w-full border-b border-black/20 my-2 w" />
         <button
