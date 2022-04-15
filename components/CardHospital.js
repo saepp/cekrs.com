@@ -25,7 +25,7 @@ const CardHospital = ({ hosp, type }) => {
 
   return (
     <div className="max-w-screen-md max-h-fit border-2 rounded-md drop-shadow-lg p-4 mb-3">
-      <div className="flex justify-between">
+      <div className="flex flex-col md:flex-row justify-between">
         <div className="flex flex-col">
           <h3 className="text-2xl font-bold">{name}</h3>
           <p className="font-semibold mt-2">{address}</p>
@@ -34,7 +34,7 @@ const CardHospital = ({ hosp, type }) => {
         {+type === 1 && (
           <div className="flex flex-col text-center justify-center items-center">
             <div
-              className={`flex flex-col justify-center items-center h-full py-2 px-3 ml-2 shadow-inner rounded-md ${
+              className={`flex flex-col justify-center w-full items-center h-full py-2 px-3 ml-2 shadow-inner rounded-md ${
                 bed === 0 && "bg-red-600"
               }`}
             >
@@ -80,7 +80,7 @@ const CardHospital = ({ hosp, type }) => {
           )}
         </div>
       )}
-      <div className="flex mt-2 pt-2 justify-between">
+      <div className="flex flex-col md:flex-row mt-2 pt-2 justify-between">
         <a
           href={`tel:${phone}`}
           disabled={!phone || phone === "null"}
@@ -93,19 +93,19 @@ const CardHospital = ({ hosp, type }) => {
           <FaPhone className="mr-2" />
           {phone || "Tidak tersedia"}
         </a>
-        <div className="flex">
+        <div className="flex flex-col md:flex-row">
           <a
             href={data?.data?.gmaps}
             rel="noreferrer"
             target="_blank"
-            className="inline-flex h-10 justify-center items-center bg-white border border-[#262FD8] hover:border-[#0f1699] hover:text-[#0f1699] rounded-md px-4 text-[#262FD8] font-semibold"
+            className="inline-flex h-10 justify-center items-center bg-white border mt-2 md:mt-0 border-[#262FD8] hover:border-[#0f1699] hover:text-[#0f1699] rounded-md px-4 text-[#262FD8] font-semibold"
           >
             <FaMapMarkerAlt className="mr-2" />
             Lokasi
           </a>
           <a
             onClick={() => router.push(`/rs-detail?id=${id}&type=${type}`)}
-            className="flex h-10 justify-center items-center bg-white border border-[#262FD8] rounded-md px-4 text-[#262FD8] hover:border-[#0f1699] hover:text-[#0f1699] font-semibold ml-2 cursor-pointer"
+            className="flex h-10 justify-center items-center bg-white border mt-2 md:mt-0 border-[#262FD8] rounded-md px-4 text-[#262FD8] hover:border-[#0f1699] hover:text-[#0f1699] font-semibold md:ml-2 cursor-pointer"
           >
             Detail
             <FaArrowRight className="ml-2" />

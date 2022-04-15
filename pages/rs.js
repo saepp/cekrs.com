@@ -51,7 +51,7 @@ const RumahSakit = () => {
           classBoxOne="inline-flex w-fit h-10 border items-center px-2 rounded-md"
           classCheckmarkOne="top-0.5"
           classLabelOne="font-bold"
-          classButton="absolute h-10 border w-28 bottom-0 right-0 font-bold bg-[#262FD8] text-white rounded-md mr-2"
+          classButton="h-10 border w-28  font-bold bg-[#262FD8] text-white rounded-md mr-2"
         />
         <hr className="w-full border-b border-black/20 my-2 w" />
         <button
