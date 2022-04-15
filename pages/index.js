@@ -3,12 +3,12 @@ import Search from "../components/Search";
 
 export default function Home() {
   return (
-    <div className="bg-white dark:bg-[#362D3D] text-[#362D3D] dark:text-white md:space-y-6">
+    <div className="bg-white dark:bg-[#362D3D] text-[#362D3D] dark:text-white">
       <Head>
         <title>cekrs.com</title>
       </Head>
 
-      <div className="flex flex-col justify-center max-w-screen-md h-screen items-center mx-auto">
+      <div className="flex flex-col justify-center max-w-screen-md h-screen items-center mx-auto px-2">
         <h1 className="text-5xl font-bold text-center pb-6">
           Cek Ketersediaan Tempat Tidur <br /> Rumah Sakit
         </h1>

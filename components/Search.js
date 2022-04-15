@@ -51,7 +51,9 @@ const Search = ({
       <div className={classDivOne}>
         <h3 className={classTextOne}>Pilih Provinsi</h3>
         <select
-          className={classSelectOne}
+          className={`${classSelectOne} cursor-pointer ${
+            !data && "cursor-not-allowed"
+          }`}
           value={prov}
           disabled={!data}
           onChange={(e) => setProv(e.target.value)}
@@ -69,7 +71,9 @@ const Search = ({
       <div className={classDivTwo}>
         <h3 className={classTextTwo}>Pilih Kabupaten / Kota</h3>
         <select
-          className={classSelectTwo}
+          className={`${classSelectTwo} cursor-pointer ${
+            (!prov.length || load) && "cursor-not-allowed"
+          }`}
           value={city}
           disabled={!prov.length || load}
           onChange={(e) => setCity(e.target.value)}
@@ -89,8 +93,10 @@ const Search = ({
       <div className={classDivRadioOne}>
         <h3 className={classTextRadio}>Pilih Tempat Tidur : </h3>
         <div className={classDivRadioTwo}>
-          <div className={`${classBoxOne} mr-2`}>
-            <label className={`label-one ${classLabelOne}`}>
+          <div
+            className={`${classBoxOne} hover:bg-gray-200 cursor-pointer mr-2`}
+          >
+            <label className={`label-one  ${classLabelOne}`}>
               Covid 19
               <input
                 type="radio"
@@ -103,7 +109,7 @@ const Search = ({
               <span className={`checkmark ${classCheckmarkOne}`}></span>
             </label>
           </div>
-          <div className={classBoxOne}>
+          <div className={`${classBoxOne} hover:bg-gray-200 cursor-pointer`}>
             <label className={`label-one ${classLabelOne}`}>
               Non-Covid 19
               <input
@@ -120,7 +126,9 @@ const Search = ({
         </div>
       </div>
       <button
-        className={`${classButton} ${!prov && "cursor-not-allowed"}`}
+        className={`${classButton} hover:bg-[#0f1699] ${
+          !prov && "cursor-not-allowed bg-[#53b0f3]"
+        }`}
         disabled={!prov || load}
         onClick={() =>
           router.push(`/rs?prov=${prov}&city=${city}&type=${type}`)
