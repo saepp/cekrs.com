@@ -18,6 +18,7 @@ const Search = ({
   classBoxOne,
   classCheckmarkOne,
   classLabelOne,
+  classDivButton,
   classButton,
 }) => {
   const [prov, setProv] = useState("");
@@ -125,17 +126,19 @@ const Search = ({
           </div>
         </div>
       </div>
-      <button
-        className={`${classButton} ${
-          !prov ? "cursor-not-allowed bg-[#262fd867]" : "hover:bg-[#0f1699]"
-        }`}
-        disabled={!prov || load}
-        onClick={() =>
-          router.push(`/rs?prov=${prov}&city=${city}&type=${type}`)
-        }
-      >
-        Cari
-      </button>
+      <div className={classDivButton}>
+        <button
+          className={`${classButton} ${
+            !prov ? "cursor-not-allowed bg-[#262fd867]" : "hover:bg-[#0f1699]"
+          }`}
+          disabled={!prov || load}
+          onClick={() =>
+            router.push(`/rs?prov=${prov}&city=${city}&type=${type}`)
+          }
+        >
+          Cari
+        </button>
+      </div>
     </div>
   );
 };
