@@ -53,7 +53,7 @@ const RumahSakit = () => {
           classCheckmarkOne="top-0.5"
           classLabelOne="font-bold pl-7 pr-1"
           classDivButton="flex items-end justify-center w-full"
-          classButton="w-full h-10 border md:w-28 font-bold bg-[#262FD8] text-white rounded-md mt-2"
+          classButton="w-full h-10 border md:w-24 font-bold bg-[#262FD8] text-white rounded-md mt-2"
         />
         <hr className="w-full border-b border-black/20 my-2" />
         <button
