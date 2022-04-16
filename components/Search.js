@@ -112,7 +112,6 @@ const Search = ({
           </div>
           <div className={`${classBoxOne} hover:bg-gray-200 cursor-pointer`}>
             <label className={`label-one ${classLabelOne}`}>
-              Non-Covid 19
               <input
                 type="radio"
                 className="absolute opacity-0 cursor-pointer"
@@ -121,6 +120,7 @@ const Search = ({
                 defaultChecked={type === 2}
                 onClick={(e) => setType(e.target.value)}
               />
+              Non-Covid 19
               <span className={`checkmark ${classCheckmarkOne}`}></span>
             </label>
           </div>

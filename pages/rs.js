@@ -40,20 +40,20 @@ const RumahSakit = () => {
         <h1 className="font-bold text-5xl text-center">Daftar Rumah Sakit</h1>
         <Search
           classAll="flex flex-col md:flex-row justify-center w-full mt-5"
-          classDivOne="mr-3"
+          classDivOne="w-full md:w-44 md:mr-1"
           classTextOne="font-bold"
-          classSelectOne="h-10 w-full md:max-w-[176px] font-bold rounded-md"
-          classDivTwo="mr-3"
+          classSelectOne="h-10 w-full md:w-44 font-bold rounded-md"
+          classDivTwo="w-full md:w-44 md:mr-1"
           classTextTwo="font-bold"
-          classSelectTwo="h-10 w-full md:max-w-[176px] font-bold rounded-md"
-          classDivRadioOne="mr-3"
+          classSelectTwo="h-10 w-full md:w-44 font-bold rounded-md"
+          classDivRadioOne="w-full md:w-72 md:mr-1"
           classTextRadio="font-bold"
           classDivRadioTwo="flex"
-          classBoxOne="inline-flex w-fit h-10 border items-center justify-center rounded-md"
-          classCheckmarkOne=""
+          classBoxOne="inline-flex w-full md:w-36 h-10 border items-center justify-center rounded-md"
+          classCheckmarkOne="top-0.5"
           classLabelOne="font-bold pl-7 pr-1"
-          classDivButton="flex items-end justify-center"
-          classButton="w-full h-10 border md:w-28 font-bold bg-[#262FD8] text-white rounded-md mr-2 mt-2"
+          classDivButton="flex items-end justify-center w-full"
+          classButton="w-full h-10 border md:w-28 font-bold bg-[#262FD8] text-white rounded-md mt-2"
         />
         <hr className="w-full border-b border-black/20 my-2" />
         <button
