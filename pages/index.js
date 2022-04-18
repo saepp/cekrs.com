@@ -8,7 +8,7 @@ export default function Home() {
         <title>cekrs.com</title>
       </Head>
 
-      <div className="flex flex-col justify-center max-w-screen-md h-screen items-center mx-auto px-2">
+      <div className="flex flex-col justify-center max-w-screen-md h-screen items-center mx-auto px-2 pb-36">
         <h1 className="text-5xl font-bold text-center pb-6">
           Cek Ketersediaan Tempat Tidur <br /> Rumah Sakit
         </h1>
