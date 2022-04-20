@@ -1,15 +1,15 @@
 import Head from "next/head";
 import Search from "../components/Search";
 
-export default function Home() {
+function Home() {
   return (
     <div className="bg-white dark:bg-[#362D3D] text-[#362D3D] dark:text-white">
       <Head>
         <title>cekrs.com</title>
       </Head>
 
-      <div className="flex flex-col justify-center max-w-screen-md h-screen items-center mx-auto px-2 pb-36">
-        <h1 className="text-5xl font-bold text-center pb-6">
+      <div className="flex flex-col justify-center max-w-screen-md h-screen items-center my-auto mx-auto px-2 bg-white dark:bg-[#362D3D]">
+        <h1 className="text-5xl font-bold text-center pb-6 text-[#362D3D] dark:text-white">
           Cek Ketersediaan Tempat Tidur <br /> Rumah Sakit
         </h1>
         <div className="w-full border-t border-black/20 pt-6"></div>
@@ -32,3 +32,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Home;

@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="absolute -bottom-20 flex items-center justify-center w-full h-10 py-10 mb-20 overflow-hidden">
+    <footer className="absolute -bottom-20 flex items-center justify-center w-full h-10 py-10 overflow-hidden">
       <div className="flex items-center justify-center">
         <svg
           stroke="currentColor"
@@ -36,7 +36,7 @@ const Footer = () => {
           </a>
         </Link>
       </div>
-    </div>
+    </footer>
   );
 };
 

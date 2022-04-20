@@ -8,9 +8,9 @@ const Layout = ({ children }) => {
       <Head>
         <title>Next Tailwind Theme</title>
       </Head>
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col relative">
         <Header />
-        <main className="flex-grow relative">{children}</main>
+        <main className="flex-grow">{children}</main>
         <Footer />
       </div>
     </>

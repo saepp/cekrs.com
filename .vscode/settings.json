@@ -1,0 +1,4 @@
+{
+  "editor.maxTokenizationLineLength": 20000000000,
+  "editor.minimap.maxColumn": 1200000000
+}
