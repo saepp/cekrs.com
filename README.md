@@ -1,4 +1,4 @@
-#Cek RS Indonesia | cekrs.com
+#Cek RS Indonesia
 
 ![Cek RS Indonesia](public/ss.png)
 
